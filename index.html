@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zion Interior & Modular Kitchen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#8B5E3C',
+                        secondary: '#F7F3EE',
+                        dark: '#1F2937',
+                        accent: '#D6A77A'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4)),
+            url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop') center/cover;
+        }
+
+        .gallery-img {
+            transition: all 0.4s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-white text-gray-700">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" class="w-10 h-10">
+                            <path d="M18 90 L60 25 L102 90" fill="none" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M38 90 L82 90" fill="none" stroke="#D6A77A" stroke-width="10" stroke-linecap="round"/>
+                            <path d="M46 58 L74 58" fill="none" stroke="#D6A77A" stroke-width="8" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary">Zion Interior</h1>
+                        <p class="text-sm text-gray-500">Modular Kitchen & Interior Solutions</p>
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#home" class="hover:text-primary transition">Home</a>
+                    <a href="#about" class="hover:text-primary transition">About</a>
+                    <a href="#services" class="hover:text-primary transition">Services</a>
+                    <a href="#gallery" class="hover:text-primary transition">Gallery</a>
+                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                </nav>
+
+                <a href="tel:+918124312127" class="hidden md:inline-flex bg-primary text-white px-5 py-3 rounded-full font-medium hover:bg-[#734B2D] transition">
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center text-white pt-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium inline-block mb-6">
+                    Customized Interior Works & Designs
+                </span>
+
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Premium Wooden Interiors & Modular Kitchen Solutions
+                </h2>
+
+                <p class="text-lg text-gray-200 leading-relaxed mb-8">
+                    Zion Wooden Interior and Modular Kitchen offers elegant, modern and customized wooden interiors for homes, offices and commercial spaces in Coimbatore.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-primary hover:bg-[#734B2D] text-white px-7 py-4 rounded-full font-semibold transition">
+                        Explore Services
+                    </a>
+
+                    <a href="#contact" class="border border-white px-7 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 shadow-2xl">
+                <h3 class="text-2xl font-bold mb-6">Why Choose Us?</h3>
+
+                <div class="space-y-5">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-xl font-bold">✓</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Customized Designs</h4>
+                            <p class="text-gray-200 text-sm">Tailored wooden interiors based on your space and style.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-xl font-bold">✓</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Quality Materials</h4>
+                            <p class="text-gray-200 text-sm">Premium woodwork with durable finishes and modern aesthetics.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-xl font-bold">✓</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Wholesale & Retail</h4>
+                            <p class="text-gray-200 text-sm">Serving residential and commercial customers across Coimbatore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <img 
+                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop"
+                    alt="Wooden Interior"
+                    class="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                >
+            </div>
+
+            <div>
+                <span class="text-primary font-semibold uppercase tracking-widest">About Us</span>
+
+                <h2 class="text-4xl font-bold text-dark mt-4 mb-6 leading-tight">
+                    Professional Wooden Interior & Modular Kitchen Experts
+                </h2>
+
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Zion Wooden Interior and Modular Kitchen is one of the trusted interior solution providers located in Saravanampatti, Coimbatore. We specialize in customized wood works, modular kitchens, wardrobes, TV cabinets, office furniture and all kinds of wooden doors.
+                </p>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    We focus on delivering elegant craftsmanship, premium quality materials and modern interior designs that perfectly match your needs and lifestyle.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h3 class="text-3xl font-bold text-primary">100%</h3>
+                        <p class="text-gray-600 mt-2">Customized Solutions</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <h3 class="text-3xl font-bold text-primary">Premium</h3>
+                        <p class="text-gray-600 mt-2">Wood & Finishing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold uppercase tracking-widest">Our Services</span>
+                <h2 class="text-4xl font-bold text-dark mt-4 mb-6">
+                    Complete Interior & Wood Work Solutions
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                    We provide all kinds of interior works with customized modern designs for residential and commercial spaces.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-secondary p-8 rounded-3xl hover:shadow-2xl transition duration-300">
+                    <div class="text-5xl mb-6">🍽️</div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Modular Kitchen</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Stylish and space-saving modular kitchen designs with premium finishes.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-3xl hover:shadow-2xl transition duration-300">
+                    <div class="text-5xl mb-6">🚪</div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Wooden Doors</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Elegant and durable customized wooden doors for all spaces.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-3xl hover:shadow-2xl transition duration-300">
+                    <div class="text-5xl mb-6">📺</div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">TV Units</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Modern TV cabinets and entertainment units with smart storage.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-3xl hover:shadow-2xl transition duration-300">
+                    <div class="text-5xl mb-6">👔</div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Wardrobes</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Customized wardrobes with elegant designs and optimized storage.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-3xl hover:shadow-2xl transition duration-300">
+                    <div class="text-5xl mb-6">🪔</div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Pooja Stand</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Beautiful wooden pooja units designed with traditional aesthetics.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-3xl hover:shadow-2xl transition duration-300">
+                    <div class="text-5xl mb-6">💼</div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Office Furniture</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Office tables, cabinets and professional wooden office interiors.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold uppercase tracking-widest">Gallery</span>
+                <h2 class="text-4xl font-bold text-dark mt-4 mb-6">
+                    Our Interior Design Works
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Explore our modern wooden interior projects and customized furniture designs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" class="gallery-img w-full h-80 object-cover" alt="Kitchen">
+                </div>
+
+                <div class="overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" class="gallery-img w-full h-80 object-cover" alt="Interior">
+                </div>
+
+                <div class="overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" class="gallery-img w-full h-80 object-cover" alt="Wood Work">
+                </div>
+
+                <div class="overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" class="gallery-img w-full h-80 object-cover" alt="TV Unit">
+                </div>
+
+                <div class="overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200&auto=format&fit=crop" class="gallery-img w-full h-80 object-cover" alt="Wardrobe">
+                </div>
+
+                <div class="overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" class="gallery-img w-full h-80 object-cover" alt="Office Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+
+                <div>
+                    <span class="text-primary font-semibold uppercase tracking-widest">Contact Us</span>
+
+                    <h2 class="text-4xl font-bold text-dark mt-4 mb-6">
+                        Let’s Build Your Dream Interior
+                    </h2>
+
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Contact us for all types of wooden interior works, modular kitchens and customized furniture solutions.
+                    </p>
+
+                    <div class="space-y-6">
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center text-2xl">
+                                📍
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-dark">Address</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    SF No.1, V.K.V Nanjappagoundar Nagar,
+                                    Kumaraguru Garden Karattumedu,
+                                    Saravanampatti Post, Chitra Nagar,
+                                    Coimbatore, Tamil Nadu - 641035
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center text-2xl">
+                                📞
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-dark">Phone</h3>
+                                <p class="text-gray-600">+91 81243 12127</p>
+                                <p class="text-gray-600">+91 90420 23209</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center text-2xl">
+                                🕘
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-dark">Opening Hours</h3>
+                                <p class="text-gray-600">Monday - Saturday</p>
+                                <p class="text-gray-600">09:00 AM - 09:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-secondary p-4 rounded-3xl shadow-xl overflow-hidden">
+                    <div class="rounded-2xl overflow-hidden h-full min-h-[500px]">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Saravanampatti%20Coimbatore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%"
+                            height="100%"
+                            style="border:0; min-height:500px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h3 class="text-3xl font-bold mb-4">Zion Wooden Interior & Modular Kitchen</h3>
+            <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                Professional wooden interior works and modular kitchen solutions in Coimbatore.
+            </p>
+
+            <div class="mt-6 flex flex-wrap justify-center gap-6 text-sm text-gray-300">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#gallery" class="hover:text-white transition">Gallery</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+
+            <div class="border-t border-white/10 mt-8 pt-6 text-sm text-gray-400">
+                © 2026 Zion Wooden Interior & Modular Kitchen. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
