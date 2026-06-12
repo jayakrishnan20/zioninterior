@@ -44,6 +44,31 @@
         .gallery-img:hover {
             transform: scale(1.05);
         }
+
+        .gallery-tab {
+            background: #fff;
+            color: #1F2937;
+            border: 1px solid rgba(139, 94, 60, 0.2);
+        }
+
+        .gallery-tab:hover {
+            border-color: #8B5E3C;
+            color: #8B5E3C;
+        }
+
+        .gallery-tab.active {
+            background: #8B5E3C;
+            color: #fff;
+            border-color: #8B5E3C;
+        }
+
+        .gallery-item {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .gallery-item.hide {
+            display: none;
+        }
     </style>
 </head>
 
@@ -263,29 +288,38 @@
                 </p>
             </div>
 
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="gallery-tab active px-6 py-2.5 rounded-full font-semibold transition" data-filter="all">All</button>
+                <button class="gallery-tab px-6 py-2.5 rounded-full font-semibold transition" data-filter="kitchen">Kitchen</button>
+                <button class="gallery-tab px-6 py-2.5 rounded-full font-semibold transition" data-filter="wallroom">Wall Room</button>
+                <button class="gallery-tab px-6 py-2.5 rounded-full font-semibold transition" data-filter="bedroom">Bedroom</button>
+            </div>
+
+            <!-- Gallery Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-3xl shadow-lg">
-                    <img src="gallery1.png" class="gallery-img w-full h-80 object-cover" alt="zion">
+                <div class="gallery-item overflow-hidden rounded-3xl shadow-lg" data-category="kitchen">
+                    <img src="gallery1.png" class="gallery-img w-full h-80 object-cover" alt="Kitchen interior design">
                 </div>
 
-                <div class="overflow-hidden rounded-3xl shadow-lg">
-                    <img src="gallery2.png" class="gallery-img w-full h-80 object-cover" alt="zion">
+                <div class="gallery-item overflow-hidden rounded-3xl shadow-lg" data-category="kitchen">
+                    <img src="gallery2.png" class="gallery-img w-full h-80 object-cover" alt="Kitchen interior design">
                 </div>
 
-                <div class="overflow-hidden rounded-3xl shadow-lg">
-                    <img src="gallery3.png" class="gallery-img w-full h-80 object-cover" alt="zion">
+                <div class="gallery-item overflow-hidden rounded-3xl shadow-lg" data-category="wallroom">
+                    <img src="gallery3.png" class="gallery-img w-full h-80 object-cover" alt="Wall room interior design">
                 </div>
 
-                <div class="overflow-hidden rounded-3xl shadow-lg">
-                    <img src="gallery4.png" class="gallery-img w-full h-80 object-cover" alt="zion">
+                <div class="gallery-item overflow-hidden rounded-3xl shadow-lg" data-category="wallroom">
+                    <img src="gallery4.png" class="gallery-img w-full h-80 object-cover" alt="Wall room interior design">
                 </div>
 
-                <div class="overflow-hidden rounded-3xl shadow-lg">
-                    <img src="gallery5.png" class="gallery-img w-full h-80 object-cover" alt="zion">
+                <div class="gallery-item overflow-hidden rounded-3xl shadow-lg" data-category="bedroom">
+                    <img src="gallery5.png" class="gallery-img w-full h-80 object-cover" alt="Bedroom interior design">
                 </div>
 
-                <div class="overflow-hidden rounded-3xl shadow-lg">
-                    <img src="gallery6.png" class="gallery-img w-full h-80 object-cover" alt="zion">
+                <div class="gallery-item overflow-hidden rounded-3xl shadow-lg" data-category="bedroom">
+                    <img src="gallery6.png" class="gallery-img w-full h-80 object-cover" alt="Bedroom interior design">
                 </div>
             </div>
         </div>
@@ -377,6 +411,23 @@
             </div>
         </div>
     </footer>
+    <script>
+        const tabs = document.querySelectorAll('.gallery-tab');
+        const items = document.querySelectorAll('.gallery-item');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+                items.forEach(item => {
+                    const match = filter === 'all' || item.dataset.category === filter;
+                    item.classList.toggle('hide', !match);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
